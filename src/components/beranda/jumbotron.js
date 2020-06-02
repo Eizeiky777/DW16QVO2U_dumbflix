@@ -8,7 +8,14 @@ class Banner extends Component {
     render(){
         
         const divWitcher = {
-            width: "50vh"
+            width: "80vh"
+        };
+
+        const textWitcher = {
+            color: "white",
+            textShadow: "2px 2px 2px #000",
+            marginTop: "15px",
+            marginBottom: "15px"
         };
 
         const divStyle = {
@@ -30,13 +37,15 @@ class Banner extends Component {
         <div>
             <Jumbotron style={divStyle} fluid>
                 <Container className="pt-5" >
-                    <h1><Image src={theWitcher} style={divWitcher}/></h1>
-                    <h1>Fluid jumbotron</h1>
+                    <Image src={theWitcher} style={divWitcher}/>
+                    <div style={textWitcher}>
                     <p>
-                    This is a modified jumbotron that occupies the entire horizontal space of
-                    its parent.
+                    Geralt of Rivia, a solitary monster hunter, struggles to find his place in <br />
+                    a world where people often prove more wicked than beast
                     </p>
-                    <Form inline>
+                    <p className="d-inline-flex pr-3">2019</p><Button variant="outline-light"> TV Series </Button>
+                    </div>
+                    <Form >
                         <Button variant="btn btn-danger mr-3 text-light" style={buttonWatch}>
                             Watch Now !
                         </Button>

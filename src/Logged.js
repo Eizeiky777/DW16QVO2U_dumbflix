@@ -4,7 +4,7 @@ import Header from './components/beranda/header';
 import Banner from './components/beranda/jumbotron';
 import MovieList from './components/beranda/movielist';
 
-class App extends Component {
+class Logged extends Component {
   render(){
     return (
       <div>
@@ -16,4 +16,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Logged;

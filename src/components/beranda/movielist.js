@@ -22,12 +22,12 @@ class MovieList extends Component {
         return (
         <div style={divPembungkus}>
             <Container className="pt-3">
-                <div className="text-light">TV Series</div>
+                <div className="text-light" id="tv-show" >TV Series</div>
                 <Row >
                     {
                         Tv.map( tvv => {
-                            return <Col xs={6} md={2} className="m-3" >
-                                        <Image src={tvv.image} style={setGambar} />
+                            return <Col xs={6} md={2} className="m-3" key={tvv.id}>
+                                        <Image src={tvv.image} style={setGambar} key={tvv.id}/>
                                         <div className="pt-1">
                                         <p  className="text-white text-font-weight-bold">{tvv.name}</p>
                                         <p className="text-muted text-font-weight-light">{tvv.year}</p>
@@ -36,12 +36,12 @@ class MovieList extends Component {
                         })
                     }
                 </Row>
-                <div className="text-light">Movies</div>
+                <div className="text-light" id="movies">Movies</div>
                 <Row >
                     {
                         Movies.map( movie => {
-                            return <Col xs={6} md={2} className="m-3" >
-                                        <Image src={movie.image} style={setGambar} />
+                            return <Col xs={6} md={2} className="m-3" key={movie.id}>
+                                        <Image src={movie.image} style={setGambar} key={movie.id}/>
                                         <div className="pt-1">
                                         <p  className="text-white text-font-weight-bold">{movie.name}</p>
                                         <p className="text-muted text-font-weight-light">{movie.year}</p>
