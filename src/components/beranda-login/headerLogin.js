@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, Button, Form, Image, Modal } from 'react-bootstrap';
+import { Nav, Navbar, Button, Form, Image, Modal, Dropdown, DropdownButton } from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
 
 import logoImage from './data/logo.png';
+import userPhoto from './data/user_photo.png';
+
 import Jumbotron from './jumbotron';
 import MovieList from './movielist';
 
@@ -13,7 +15,7 @@ function LoginUser(props) {
     const history = useHistory();
 
     function tester (){
-        let path = `logged`; 
+        let path = `/`; 
         history.push(path);
     }
 
@@ -27,27 +29,14 @@ function LoginUser(props) {
     >
 
         <Modal.Body className="bg-dark rounded pb-4">
-            <h1 className="bg-dark text-light d-flex justify-content-center" >Login</h1>
-            <Form style={{width:"50%", margin:"auto"}}>
-                <Form.Group controlId="formBasicEmail">
-                <Form.Label className="text-light">Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" className="bg-light"/>
-                <Form.Text className="text-light">
-                    * We'll never share your email with anyone else.
-                </Form.Text>
-                </Form.Group>
-            
-                <Form.Group controlId="formBasicPassword">
-                <Form.Label className="text-light">Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-                
+            <h1 className="bg-dark text-light d-flex justify-content-center pb-5" >LOG OUT </h1>
+            <Form style={{width:"50%", margin:"auto"}} className="pb-5">
+                <p className="text-white">Are you sure to leaving right now ? </p>
                 <Button type="submit" variant="danger" block className="text-light" onClick={() => tester()} >
-                    Login
+                    Yes
                 </Button>
-                <p className="text-light">don't have an account ? just <a href="#test">click here</a></p>
                 <div className="text-right mt-2">
-                <Button onClick={props.onHide} >Close</Button>
+                <Button onClick={props.onHide} block >No</Button>
                 </div>
             </Form>
         </Modal.Body>
@@ -126,7 +115,7 @@ function Registered(props) {
 
 // END of Modal function
 
-class Header extends Component {
+class HeaderLogin extends Component {
 
     constructor(){
         super()
@@ -169,8 +158,18 @@ class Header extends Component {
                 <Form inline>
 
                     <div>
-                        <Button variant="btn btn-light mr-3 text-danger" style={{width:100}} onClick={() => this.setState({modalRegister:true})}>Register</Button>
-                        <Button variant="btn btn-danger" style={{width:100}} onClick={() => this.setState({modalShow:true})}>Login</Button>
+                        <DropdownButton
+                        alignRight
+                        title={<Image src={userPhoto} />}
+                        id="dropdown-menu-align-right"
+                        variant="dark"
+                        
+                        >
+                            <Dropdown.Item eventKey="1"> <i class='fas fa-user pr-2'></i> Profile</Dropdown.Item>
+                            <Dropdown.Item eventKey="2"> <i class='fas fa-money-check-alt pr-1'></i> Pay</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item eventKey="3" onClick={() => this.setState({modalShow: true})}> <i class='fas fa-sign-out-alt pr-2' style={{color: 'red'}}></i> Logout</Dropdown.Item>
+                        </DropdownButton>
                     </div>
 
                 </Form>
@@ -205,4 +204,4 @@ const dumbFlix = {
 };
 
 
-export default Header;
+export default HeaderLogin;
