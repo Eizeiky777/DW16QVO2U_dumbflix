@@ -47,7 +47,7 @@ function LoginUser(props) {
                 </Button>
                 <p className="text-light">don't have an account ? just <a href="#test">click here</a></p>
                 <div className="text-right mt-2">
-                <Button onClick={props.onHide} >Close</Button>
+                <Button onClick={props.onHide} className="btn btn-outline-dark bg-dark" >x</Button>
                 </div>
             </Form>
         </Modal.Body>
@@ -150,7 +150,7 @@ class Header extends Component {
     render(){   
 
         const { modalShow, modalRegister, id, homes} = this.state;
-        console.log(homes);
+     
         return (
         <>
             <Navbar bg="dark" expand="lg">

@@ -9,42 +9,8 @@ import Jumbotron from './jumbotron';
 import MovieList from './movielist';
 
 
+
 // Modal function 
-function LoginUser(props) {
-
-    const history = useHistory();
-
-    function tester (){
-        let path = `/`; 
-        history.push(path);
-    }
-
-    return (
-    <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-        
-    >
-
-        <Modal.Body className="bg-dark rounded pb-4">
-            <h1 className="bg-dark text-light d-flex justify-content-center pb-5" >LOG OUT </h1>
-            <Form style={{width:"50%", margin:"auto"}} className="pb-5">
-                <p className="text-white">Are you sure to leaving right now ? </p>
-                <Button type="submit" variant="danger" block className="text-light" onClick={() => tester()} >
-                    Yes
-                </Button>
-                <div className="text-right mt-2">
-                <Button onClick={props.onHide} block >No</Button>
-                </div>
-            </Form>
-        </Modal.Body>
-        
-    </Modal>
-    );
-}
-
 
 function Registered(props) {
     return (
@@ -139,7 +105,10 @@ class HeaderLogin extends Component {
     render(){   
 
         const { modalShow, modalRegister, id, homes} = this.state;
-        console.log(homes);
+
+
+    
+
         return (
         <>
             <Navbar bg="dark" expand="lg">
@@ -165,10 +134,11 @@ class HeaderLogin extends Component {
                         variant="dark"
                         
                         >
-                            <Dropdown.Item eventKey="1"> <i class='fas fa-user pr-2'></i> Profile</Dropdown.Item>
-                            <Dropdown.Item eventKey="2"> <i class='fas fa-money-check-alt pr-1'></i> Pay</Dropdown.Item>
+                            <Dropdown.Item eventKey="1" href="/logpay/profile" > <i className='fas fa-user pr-2'></i> Profile</Dropdown.Item>
+                            <Dropdown.Item eventKey="2" href="/logpay/pay"> <i className='fas fa-money-check-alt pr-1'></i> Pay</Dropdown.Item>
+                            <Dropdown.Item eventKey="2" href="/admin/007"> <i className='fas fa-chalkboard-teacher pr-1'></i> Admin</Dropdown.Item>
                             <Dropdown.Divider />
-                            <Dropdown.Item eventKey="3" onClick={() => this.setState({modalShow: true})}> <i class='fas fa-sign-out-alt pr-2' style={{color: 'red'}}></i> Logout</Dropdown.Item>
+                            <Dropdown.Item eventKey="3" href="/"> <i className='fas fa-sign-out-alt pr-2' style={{color: 'red'}}></i> Logout</Dropdown.Item>
                         </DropdownButton>
                     </div>
 
@@ -182,12 +152,6 @@ class HeaderLogin extends Component {
             {
                 <MovieList ids={id} homi={homes}/>
             }
-
-            <LoginUser
-                show={modalShow}
-                onHide={() => this.setState({modalShow: false})}
-                nilai={1}
-            />
 
             <Registered
                 show={modalRegister}

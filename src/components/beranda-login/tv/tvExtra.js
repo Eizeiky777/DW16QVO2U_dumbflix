@@ -4,6 +4,7 @@ import b from './11.png';
 import c from './10.png';
 import d from './9.png';
 import e from './8.png';
+import f from './7.png';
 
 const TvExtra = [
     {
@@ -29,6 +30,11 @@ const TvExtra = [
     },{
     id: 5,
     image: e,
+    name: 'Ocke Key',
+    year: '2019'
+    },{
+    id: 6,
+    image: f,
     name: 'Ocke Key',
     year: '2019'
     }

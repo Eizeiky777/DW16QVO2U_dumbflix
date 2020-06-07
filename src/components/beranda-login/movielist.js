@@ -51,8 +51,8 @@ class MovieList extends Component {
                 <Row style={display.tv}>
                     {
                         Tv.map( tvv => {
-                            return <Col xs={5} md={3} lg={2} className="m-3 " key={tvv.id}>
-                                        <Image src={tvv.image} style={setGambar} key={tvv.id}/>
+                            return <Col xs={5} md={3} lg={2}  key={tvv.id}>
+                                        <a href={"/detail/"+ tvv.id + "/" + tvv.genre + "/admin"} ><Image src={tvv.image} style={setGambar} key={tvv.id}/></a>
                                         <div className="pt-1">
                                         <p  className="text-white text-font-weight-bold">{tvv.name}</p>
                                         <p className="text-muted text-font-weight-light">{tvv.year}</p>
@@ -65,7 +65,7 @@ class MovieList extends Component {
                 <Row style={display.tvExtras}>
                     {
                         TvExtra.map( tvvv => {
-                            return <Col xs={5} md={3} lg={2} className="m-3 " key={tvvv.id}>
+                            return <Col xs={5} md={3} lg={2}  key={tvvv.id}>
                                         <Image src={tvvv.image} style={setGambar} key={tvvv.id}/>
                                         <div className="pt-1">
                                         <p  className="text-white text-font-weight-bold">{tvvv.name}</p>
@@ -81,7 +81,7 @@ class MovieList extends Component {
                 <Row style={display.movies}>
                     {
                         Movies.map( movie => {
-                            return <Col xs={5} md={3} lg={2} className="m-3" key={movie.id}>
+                            return <Col xs={5} md={3} lg={2} key={movie.id}>
                                         <Image src={movie.image} style={setGambar} key={movie.id}/>
                                         <div className="pt-1">
                                         <p  className="text-white text-font-weight-bold">{movie.name}</p>
@@ -95,7 +95,7 @@ class MovieList extends Component {
                 <Row style={display.moviesExtras}>
                     {
                         MoviesExtras.map( movieExtra => {
-                            return <Col xs={5} md={3} lg={2} className="m-3" key={movieExtra.id}>
+                            return <Col xs={5} md={3} lg={2} key={movieExtra.id}>
                                         <Image src={movieExtra.image} style={setGambar} key={movieExtra.id}/>
                                         <div className="pt-1">
                                         <p  className="text-white text-font-weight-bold">{movieExtra.name}</p>
@@ -114,8 +114,8 @@ class MovieList extends Component {
 
 
 const setGambar = {
-    width: '200px',
-    height: '300px',
+    width: '150px',
+  
     border: '2px solid white'
 } 
 

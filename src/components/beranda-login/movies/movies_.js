@@ -4,6 +4,7 @@ import b from './2.png';
 import c from './3.png';
 import d from './4.png';
 import e from './5.png';
+import f from './6.png';
 
 
 
@@ -31,6 +32,11 @@ const Movies = [
     },{
     id: 5,
     image: e,
+    name:' Avengers End Game',
+    year: '2019'
+    },{
+    id: 6,
+    image: f,
     name:' Avengers End Game',
     year: '2019'
     }
