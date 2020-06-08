@@ -10,7 +10,7 @@ class Detail extends Component {
 
         return (
             <div>
-                ID : {id} {genre} {status}
+                
                 <HeaderMdetail id={id} genre={genre} status={status}/>
             </div>        
         );

@@ -47,7 +47,7 @@ class MovieList extends Component {
         <div style={divPembungkus}>
             
             <Container className="pt-3">
-                <div className="text-light" id="tv-show" style={display.tv}>TV Series</div>
+                <div className="text-light pb-2" id="tv-show" style={display.tv}>TV Series</div>
                 <Row style={display.tv}>
                     {
                         Tv.map( tvv => {
@@ -77,12 +77,12 @@ class MovieList extends Component {
                 </Row>
 
                 <hr className="bg-white" />
-                <div className="text-light" id="movies" style={display.movies}>Movies</div>
+                <div className="text-light pb-2" id="movies" style={display.movies}>Movies</div>
                 <Row style={display.movies}>
                     {
                         Movies.map( movie => {
                             return <Col xs={5} md={3} lg={2} key={movie.id}>
-                                        <Image src={movie.image} style={setGambar} key={movie.id}/>
+                                        <a href={"/detail/"+ movie.id + "/" + movie.genre + "/admin"} > <Image src={movie.image} style={setGambar} key={movie.id}/> </a> 
                                         <div className="pt-1">
                                         <p  className="text-white text-font-weight-bold">{movie.name}</p>
                                         <p className="text-muted text-font-weight-light">{movie.year}</p>

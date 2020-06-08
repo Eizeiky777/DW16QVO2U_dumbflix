@@ -1,4 +1,4 @@
-import a from './1.png';
+import a from './1-movie.png';
 
 
 const TV = [
@@ -12,7 +12,7 @@ const TV = [
         deskripsi: 'asdadadadada'
     },{
         id: 1,
-        video: 'https://youtu.be/ndl1W4ltcmg',
+        video: 'https://youtu.be/sY1S34973zA',
         image: a,
         title: 'The Witcher',
         genre: 'Tv Series',

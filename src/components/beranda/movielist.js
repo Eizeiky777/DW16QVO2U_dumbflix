@@ -83,7 +83,7 @@ class MovieList extends Component {
                     {
                         Movies.map( movie => {
                             return <Col xs={5} md={2} lg={2} className="mt-2" key={movie.id}>
-                                        <a href={"/detail/"+ movie.id + "/" + movie.genre} ><Image src={movie.image} style={setGambar} key={movie.id}/></a> 
+                                        <a href={"/detail/"+ movie.id + "/" + movie.genre + "/guest"} ><Image src={movie.image} style={setGambar} key={movie.id}/></a> 
                                         <div className="pt-1">
                                         <p  className="text-white text-font-weight-bold">{movie.name}</p>
                                         <p className="text-muted text-font-weight-light">{movie.year}</p>

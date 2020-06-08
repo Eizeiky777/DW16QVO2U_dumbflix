@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Image, Row, Col, Button } from 'react-bootstrap';
+import { Container, Image, Row, Col, Button , Carousel} from 'react-bootstrap';
 import ReactPlayer from 'react-player';
+import './beranda-mdetail.css';
 
 // import theWitcherBanner from './data/main_banner.png';
 // import theJoker from './data/TV.png';
@@ -12,6 +13,8 @@ import ReactPlayer from 'react-player';
 
 import TV from './data/data';
 import MOVIES from './data/dataMovies';
+import MOVIES_EPISODE from './data/dataMoviesEpisode';
+import MOVIES_EPISODE2 from './data/dataMoviesEpisode2';
 
 
 
@@ -36,6 +39,7 @@ class Banner extends Component {
         let { ids, genres, statusX } = this.props;
 
         let TT = genres === 'Tv Series' ? TV : MOVIES;
+        let TT_E = genres === 'Tv Series' ? MOVIES_EPISODE :  MOVIES_EPISODE2;
         let STATUS = statusX === 'admin' ? true : false;
 
         return (
@@ -76,8 +80,32 @@ class Banner extends Component {
                     </Col>
                     <Col xs={6} md={5} >
                         <div style={{border: '1px solid red', height: '250px'}}>
-                        <ReactPlayer url={TT[ids].video} playing={false} width='100%' height='100%'  controls={true}/>
+                        
+                        {   
+                            STATUS ? (
+                            
+
+                                <div style={{height: '100%'}}>
+                                    <Carousel indicators={false} interval={999999999} style={{height: '100%'}}>
+                                        <Carousel.Item style={{height: '100%'}}>
+                                            <ReactPlayer url={TT_E[ids].video} playing={false} width='100%' height='100%'  controls={true}/>
+                                        </Carousel.Item >
+                                        <Carousel.Item style={{height: '100%'}}>
+                                            <ReactPlayer url={TT_E[ids].video} playing={false} width='100%' height='100%'  controls={true}/>
+                                        </Carousel.Item>
+                                        <Carousel.Item style={{height: '100%'}}>
+                                            <ReactPlayer url={TT_E[ids].video} playing={false} width='100%' height='100%'  controls={true}/>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                </div>
+                            
+                            ):
+                            ( <ReactPlayer url={TT[ids].video} playing={false} width='100%' height='100%'  controls={true}/> )
+                        }
+
+
                         <p className="text-white pt-4">{TT[ids].title} : {TT[ids].genre}</p>
+
                         </div>
                     </Col>
                 </Row>

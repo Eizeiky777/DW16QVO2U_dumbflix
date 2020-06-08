@@ -12,32 +12,32 @@ const MoviesExtras = [
     {
     id: 1,
     image: a,
-    name: 'The Godfather',
+    name: 'Chernobyl',
     year: '1999'
     },{
     id: 2,
     image: b,
-    name: 'Serigala Terakhir',
+    name: 'Sucide Squad',
     year: '2014'
     },{
     id: 3,
     image: c,
-    name: 'Grave of Fireflies',
+    name: 'Frozen',
     year: '1997'
     },{
     id: 4,
     image: d,
-    name: 'The Dark Knight',
+    name: 'Parasite',
     year: '2008'
     },{
     id: 5,
     image: e,
-    name:' Avengers End Game',
+    name:' Quiet Place',
     year: '2019'
     },{
     id: 6,
     image: f,
-    name:' Avengers End Game',
+    name:' Joker',
     year: '2019'
     }
 ];

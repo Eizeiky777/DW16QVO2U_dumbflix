@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, Button, Form, Image, Modal, Dropdown, DropdownButton,  Col } from 'react-bootstrap';
-import { useHistory } from "react-router-dom";
+import { Nav, Navbar, Button, Form, Image, Dropdown, DropdownButton,  Col } from 'react-bootstrap';
 
 import userPhoto from './data/user_photo.png';
 import logoImage from './data/logo.png';
@@ -8,123 +7,44 @@ import logoImage from './data/logo.png';
 import "./input.css";
 
 
-// Modal function 
-function LoginUser(props) {
-
-    const history = useHistory();
-
-    function tester (){
-        let path = `/logged`; 
-        history.replace(path);
+const inputFile = {
+    file : {
+        opacity: 0,
+        position: 'absolute',
+        marginTop: '-35px',
+        width: '100%',
+        zIndex: 999,
+        overflow: 'auto'},
+    file2 : {
+        opacity: 0,
+        position: 'absolute',
+        marginTop: '1px',
+        width: '100%',
+        height: 45,
+        zIndex: 999,
+        overflow: 'auto'},    
+    inputA: {
+        width: '100%', 
+        display:'inline'
     }
-
-    return (
-    <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-        
-    >
-
-        <Modal.Body className="bg-dark rounded pb-4">
-            <h1 className="bg-dark text-light d-flex justify-content-center" >Login</h1>
-            <Form style={{width:"50%", margin:"auto"}}>
-                <Form.Group controlId="formBasicEmail">
-                <Form.Label className="text-light">Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" className="bg-light"/>
-                <Form.Text className="text-light">
-                    * We'll never share your email with anyone else.
-                </Form.Text>
-                </Form.Group>
-            
-                <Form.Group controlId="formBasicPassword">
-                <Form.Label className="text-light">Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-                
-                <Button type="submit" variant="danger" block className="text-light" onClick={() => tester()} >
-                    Login
-                </Button>
-                <p className="text-light">don't have an account ? just <a href="#test">click here</a></p>
-                <div className="text-right mt-2">
-                <Button onClick={props.onHide} >Close</Button>
-                </div>
-            </Form>
-        </Modal.Body>
-        
-    </Modal>
-    );
-}
-
-
-function Registered(props) {
-    return (
-        <Modal
-            {...props}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            
-
-            >
-        
-            <Modal.Body className="bg-dark rounded pb-4" >
-                <h1 className="bg-dark text-light d-flex justify-content-center" >Register</h1>
-                <Form style={{width:"50%", margin:"auto"}} method="get">
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label className="text-light">Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" className="bg-light"/>
-                        <Form.Text className="text-light">
-                        * We'll never share your email with anyone else.
-                        </Form.Text>
-                    </Form.Group>
-                    
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label className="text-light">Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
-                    
-                    <Form.Group controlId="formBasicName">
-                        <Form.Label className="text-light">Full Name</Form.Label>
-                        <Form.Control type="text" placeholder="Full Name" />
-                    </Form.Group>
-                    
-                    <Form.Group controlId="exampleForm.SelectCustom">
-                        <Form.Label className="text-light">Gender</Form.Label>
-                        <Form.Control as="select" custom>
-                        <option>Male</option>
-                        <option>Female</option>
-                        </Form.Control>
-                    </Form.Group>
-                    
-                    <Form.Group controlId="formBasicPhone">
-                        <Form.Label className="text-light">Phone</Form.Label>
-                        <Form.Control type="text" placeholder="Phone" />
-                    </Form.Group>
-                    
-                    <Form.Group controlId="formBasicAddress">
-                        <Form.Label className="text-light">Address</Form.Label>
-                        <Form.Control type="text" placeholder="Address" />
-                    </Form.Group>
-                    
-                    <Button type="submit" variant="light" size="lg" className="text-danger" block>
-                        Register
-                    </Button>
-                    <p className="text-light">don't have an account ? just <a href="#test">click here</a></p>
-                    <div className="text-right mt-2">
-                    <Button onClick={props.onHide} >Close</Button>
-                    </div>
-                </Form>
-            </Modal.Body>
-        
-        </Modal>
-
-        
-    );
 }
 
 
 
+// Modal function 
+
+function AddForm(props) {
+
+    const { form } = props;
+
+    return (
+        <div>
+            { form.map((formel,index) => {
+                return (<div key={index}>{formel}</div>)
+            })}
+        </div>
+    );
+}
 
 
 class AddFilm extends Component {
@@ -132,13 +52,43 @@ class AddFilm extends Component {
     constructor(){
         super()
         this.state = {
-            modalShow: false, modalRegister: false
+            formRow: []
         }
 
     }
 
+    
+    x = <div>
+    <Form.Row className="pt-5 text-white">
+        <Col md={9}>
+            <Form.Control placeholder="Title Episode" />
+        </Col>
+        <Col className="pt-1 text-dark" >
+            <Form.Control placeholder="Attach Thumbnail" style={{marginTop: '-5px'}}/>
+            <Form.File id="exampleFormControlFile1" style={inputFile.file}/>
+        </Col>
+        </Form.Row>
+        <Form.Row className="pt-3 text-white">
+        <Col>
+            <Form.Control placeholder="Link Film" />
+        </Col>
+    </Form.Row>
+    </div>
+
+    adder(){
+        console.log('xxxxx')
+        
+        let xx = this.state.formRow
+        let yy = this.x
+
+        xx.push(yy)
+
+        this.setState({formRow: xx})
+    }
+
+
     render(){
-        const { modalShow, modalRegister} = this.state;
+        const { formRow} = this.state;
         let { status }  = this.props.match.params;
 
         let STATUS = status === 'admin' ? false : true; 
@@ -232,13 +182,16 @@ class AddFilm extends Component {
                                 <Form.Control placeholder="Link Film" />
                             </Col>
                         </Form.Row>
+
+
+                         <AddForm form={formRow} />
+
+
                         <Form.Row className="pt-3 text-danger adder">
                             <Col>
-                                <Form.Control placeholder="+" style={{paddingLeft: '50%', fontSize: 20, fontWeight: 'bold'}} />
+                                <Button className="btn-light text-danger"  block onClick={() => this.adder()}> + </Button>
                             </Col>
                         </Form.Row>
-
-
                         <Form.Row className="pt-3">
                             <Col md={9}>  
                             </Col>
@@ -247,23 +200,8 @@ class AddFilm extends Component {
                             </Col>
                         </Form.Row>
                     </Form>
+
                 </div>
-
-            
-            
-
-
-            <LoginUser
-                show={modalShow}
-                onHide={() => this.setState({modalShow: false})}
-                nilai={1}
-            />
-
-            <Registered
-                show={modalRegister}
-                onHide={() => this.setState({modalRegister: false})}
-            />
-
             </div>        
         );
     }
@@ -275,20 +213,6 @@ const dumbFlix = {
 
 };
 
-const inputFile = {
-    file : {
-    opacity: 0,
-    position: 'absolute',
-    marginTop: '-35px',
-    width: '100%',
-    zIndex: 999,
-    overflow: 'auto'},
-
-    inputA: {
-        width: '100%', 
-        display:'inline'
-    }
-}
 
 
 export default AddFilm;

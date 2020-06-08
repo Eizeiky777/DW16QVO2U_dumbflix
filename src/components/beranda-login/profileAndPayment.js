@@ -180,7 +180,7 @@ class ProfileAndPayment extends Component {
                                     <div className="d-inline-flex">
                                         <i className='fas fa-user pr-2 pt-2' style={{width: 30, color: '#E50914'}}></i>
                                         <div>
-                                            <h6>Personal Info</h6>
+                                            <h6>Ueki Winchester</h6>
                                             <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>Full name</span>
                                         </div>
                                     </div>
@@ -189,8 +189,8 @@ class ProfileAndPayment extends Component {
                                     <div className="d-inline-flex">
                                         <i className='fas fa-envelope pr-2 pt-2' style={{width: 30, color: '#E50914'}}></i>
                                         <div>
-                                            <h6>Personal Info</h6>
-                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>Full name</span>
+                                            <h6>ueki.winchester23@gmail.com</h6>
+                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>E-mail</span>
                                         </div>
                                     </div>
                                 </div>
@@ -198,8 +198,8 @@ class ProfileAndPayment extends Component {
                                     <div className="d-inline-flex">
                                         <i className='fas fa-star pr-2 pt-2' style={{width: 30, color: '#E50914'}}></i>
                                         <div>
-                                            <h6>Personal Info</h6>
-                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>Full name</span>
+                                            <h6>Rank Mythical Glory</h6>
+                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>Rank</span>
                                         </div>
                                     </div>
                                 </div>
@@ -207,8 +207,8 @@ class ProfileAndPayment extends Component {
                                     <div className="d-inline-flex">
                                         <i className='fas fa-venus-mars pr-2 pt-2' style={{width: 30, color: '#E50914'}}></i>
                                         <div>
-                                            <h6>Personal Info</h6>
-                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>Full name</span>
+                                            <h6>Male</h6>
+                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>Gender</span>
                                         </div>
                                     </div>
                                 </div>
@@ -216,8 +216,8 @@ class ProfileAndPayment extends Component {
                                     <div className="d-inline-flex">
                                         <i className='fas fa-phone pr-2 pt-2' style={{width: 30, color: '#E50914'}}></i>
                                         <div>
-                                            <h6>Personal Info</h6>
-                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>Full name</span>
+                                            <h6>08975862878</h6>
+                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>No telpon</span>
                                         </div>
                                     </div>
                                 </div>
@@ -225,8 +225,8 @@ class ProfileAndPayment extends Component {
                                     <div className="d-inline-flex">
                                         <i className='fas fa-building pr-2 pt-2' style={{width: 30, color: '#E50914'}}></i>
                                         <div>
-                                            <h6>Personal Info</h6>
-                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>Full name</span>
+                                            <h6>Jl Gubeng Kertajaya XI no 17 Surabaya</h6>
+                                            <span className="text-secondary" style={{fontSize: 12, marginTop: "-10px", position: "absolute"}}>Alamat</span>
                                         </div>
                                     </div>
                                 </div>

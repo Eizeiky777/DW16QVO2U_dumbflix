@@ -54,8 +54,6 @@ class HeaderAdmin extends Component {
                         variant="dark"
                         
                         >
-                            <Dropdown.Item eventKey="1" href="/logpay/profile" > <i className='fas fa-user' style={{width: 20}}></i> Profile</Dropdown.Item>
-                            <Dropdown.Item eventKey="2" href="/logpay/pay"> <i className='fas fa-money-check-alt' style={{width: 20}}></i> Pay</Dropdown.Item>
                             <Dropdown.Item eventKey="3" onClick={() => pathX()}> <i className='fas fa-file-video' style={{width: 20}}></i> List Film </Dropdown.Item>
                             <Dropdown.Item eventKey="4" onClick={() => pathY()}> <i className='fas fa-coins' style={{width: 20}}></i> Transaction </Dropdown.Item>
                             <Dropdown.Divider />

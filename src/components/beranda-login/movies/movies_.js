@@ -13,32 +13,38 @@ const Movies = [
     id: 1,
     image: a,
     name: 'The Godfather',
-    year: '1999'
+    year: '1999',
+    genre: 'Movies'
     },{
     id: 2,
     image: b,
     name: 'Serigala Terakhir',
-    year: '2014'
+    year: '2014',
+    genre: 'Movies'
     },{
     id: 3,
     image: c,
     name: 'Grave of Fireflies',
-    year: '1997'
+    year: '1997',
+    genre: 'Movies'
     },{
     id: 4,
     image: d,
     name: 'The Dark Knight',
-    year: '2008'
+    year: '2008',
+    genre: 'Movies'
     },{
     id: 5,
     image: e,
     name:' Avengers End Game',
-    year: '2019'
+    year: '2019',
+    genre: 'Movies'
     },{
     id: 6,
     image: f,
-    name:' Avengers End Game',
-    year: '2019'
+    name:' Totoro',
+    year: '2010',
+    genre: 'Movies'
     }
 ];
 

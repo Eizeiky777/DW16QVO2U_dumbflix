@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, Button, Form, Image, Modal, Dropdown, DropdownButton } from 'react-bootstrap';
-import { useHistory } from "react-router-dom";
 
 import logoImage from './data/logo.png';
 import userPhoto from './data/user_photo.png';
@@ -86,7 +85,7 @@ class HeaderLogin extends Component {
     constructor(){
         super()
         this.state = {
-            modalShow: false, modalRegister: false, id: 0, homes: "homes"
+            modalRegister: false, id: 0, homes: "homes"
         }
 
     }
@@ -104,7 +103,7 @@ class HeaderLogin extends Component {
 
     render(){   
 
-        const { modalShow, modalRegister, id, homes} = this.state;
+        const { modalRegister, id, homes} = this.state;
 
 
     

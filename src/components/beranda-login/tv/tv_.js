@@ -41,8 +41,8 @@ const Tv = [
     },{
     id: 6,
     image: f,
-    name: 'Game of Throne',
-    year: '2019',
+    name: 'OA Part II',
+    year: '2017',
     genre: 'Tv Series'
     }
 ];

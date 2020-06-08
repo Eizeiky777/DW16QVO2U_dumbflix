@@ -2,7 +2,7 @@
 const CUSTOMER = [
     {
         id: 1,
-        users: 'Radif',
+        users: 'Meliodas',
         bukti: 'bca.jpg',
         remaining: '26 hari',
         status: 'Active',
@@ -11,36 +11,36 @@ const CUSTOMER = [
     },
     {
         id: 2,
-        users: 'Radif',
+        users: 'Ban',
         bukti: 'bca.jpg',
-        remaining: '26 hari',
+        remaining: '2 hari',
         status: 'Active',
         payment: 'Approved',
         action: 'Active'
     },
     {
         id: 3,
-        users: 'Radif',
+        users: 'Gowther',
         bukti: 'bca.jpg',
-        remaining: '26 hari',
+        remaining: '16 hari',
         status: 'Active',
         payment: 'Approved',
         action: 'Active'
     },
     {
         id: 4,
-        users: 'Radif',
+        users: 'Merlin',
         bukti: 'bca.jpg',
-        remaining: '26 hari',
+        remaining: '0 hari',
         status: 'Not Active',
         payment: 'Cancel',
         action: 'Active'
     },
     {
         id: 5,
-        users: 'Radif',
+        users: 'Escanor',
         bukti: 'bca.jpg',
-        remaining: '26 hari',
+        remaining: '30 hari',
         status: 'Not Active',
         payment: 'Pending',
         action: 'Not Active'

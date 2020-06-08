@@ -43,7 +43,7 @@ class App extends Component {
         const { choose, color, color2 } = this.state;
 
         return (
-        <div style={{background: 'black'}}>
+        <div style={{background: 'black', height: '100%'}}>
             <Admin choose={choose} userX={user} pathX={() => this.test(color)} pathY={() => this.test2(color2)}/>
             {
                 choose ? (<List />) : (
