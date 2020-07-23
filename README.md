@@ -9,5 +9,11 @@ to check and start : <br>
 <b>second    :</b> import and install backend API from this link --> https://github.com/Eizeiky777/DW16QVO2U_dumbflix_API/tree/API_1.2.0 <br>
 <b>third     :</b> import and install frontend dumbflix from this link --> https://github.com/Eizeiky777/DW16QVO2U_dumbflix/tree/4.final <br><br>
 
+<b>how to install ?</b>
+- install node js that recommended for user from https://nodejs.org/en/
+- execute cmd from  folder where you put the project codes
+- type npm install
+- done 
+
 then just enjoy the code <br>
 thank you God bless <br>
