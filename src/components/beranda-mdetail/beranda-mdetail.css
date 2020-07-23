@@ -1,0 +1,21 @@
+.carousel-inner{
+    height: 100%;
+}
+
+.carousel-control-prev-icon{
+    color: red !important;
+}
+
+.carousel{
+    color: red;
+}
+
+.errorMessage{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    color: red;
+    display: flex;
+    justify-content: center;
+
+}

@@ -1,0 +1,48 @@
+
+
+.test{
+    background-color: black;
+}
+
+.adder ::placeholder {
+    color: red;
+}
+
+.caret:after { content: none }
+
+.dropdown-menu-list-js{
+    background: #1F1F1F;
+    font-size: 12px;
+
+}
+
+.dropdown-list-film-js{
+    background: #1F1F1F;
+    
+}
+
+#dropdown-basicA:hover{
+    background: #1F1F1F;
+    
+}
+
+#dropdown-basicA{
+    background: #1F1F1F;
+    
+}
+
+.dropdown-list-film-js .text-white:hover{
+    background: rgb(168, 168, 168) !important;
+    
+}
+
+.dropdrop{
+    position: relative;
+    margin-top: -10px;
+}
+
+.dropdrop2{
+    height: 75px;
+    padding-top: 25px;
+}
+
